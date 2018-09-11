@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form class="mt-5" action="/test/" method="POST">
+        <input name="person" type="text" class="form-control">
+        {% csrf_token %}
+        <button class="btn btn-primary mt-2 w-100">Submit</button>
+        <a href="/test/?person=me">TEST GET</a>
+    </form>
+{% endblock content %}
+    
